@@ -1,6 +1,5 @@
 compile = "javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')"
-run = ["java", "-classpath", ".:target/dependency/*", "Main"]
-
+run = "java -classpath .:target/dependency/* Main"
 entrypoint = "Main.java"
 hidden = ["**/*.class"]
 
@@ -14,13 +13,13 @@ packageSearch = true
 pattern = "**/*.java"
 
 [languages.java.languageServer]
-start = ["jdt-language-server"]
+start = "jdt-language-server"
 
 [unitTest]
 language = "java"
 
 [nix]
-channel = "stable-21_11"
+channel = "stable-22_05"
 
 [debugger]
 support = true
